@@ -20,7 +20,7 @@ def rabin_karp(text, pattern):
     if pattern_length == 0:
         text_length -= 1
     result = []
-    proverka = False
+    check = False
 
     for i in range(text_length - pattern_length + 1):
         part = text[i:(pattern_length + i)]
@@ -28,11 +28,11 @@ def rabin_karp(text, pattern):
         if pattern_sum == text_sum:
             for j in range(len(part) + 1):
                 if part[j:j+1] == pattern[j:j+1]:
-                    proverka = True
+                    check = True
                 else:
-                    proverka = False
+                    check = False
                     break
-            if proverka is True:
+            if check is True:
                 result.append(i)
     return result
 
