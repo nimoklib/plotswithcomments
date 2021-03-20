@@ -1,20 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
 
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 15 23:28:29 2021
-
-@author: Acer7
-"""
 
 
 import multiprocessing
 import random
-import math
+import sys
+import math 
 
 n = 1000
 
@@ -29,7 +22,7 @@ def findpi(u):
         return incircle
     
 def test_all(pool):
-    l = pool.map(findpi, [0] * n)
+    l = pool.map(findpi, [1] * n)
     return l
 
 if __name__ == '__main__':
@@ -40,10 +33,3 @@ if __name__ == '__main__':
     print(pi)
 else:
     print(__name__)
-
-
-# In[ ]:
-
-
-
-
