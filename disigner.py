@@ -4,13 +4,14 @@ Created on Thu Mar 25 23:06:26 2021
 
 @author: Acer7
 """
-import math
 import string
+import math
 import sys
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import krasota
+
 
 class Example(QMainWindow, krasota.Ui_MainWindow):
     def __init__(self):
@@ -26,9 +27,9 @@ class Example(QMainWindow, krasota.Ui_MainWindow):
             multiplier = 1 / math.factorial(n)  
             partial_sum += x_pow * multiplier
         return str(partial_sum)
-    
     def buttonClicked(self):
         self.textEdit.append(self.my_exp(10))
+    
     
 if __name__ == '__main__':
     app = QApplication(sys.argv)
