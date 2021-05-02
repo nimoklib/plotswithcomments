@@ -3,7 +3,8 @@
 Created on Sat May  1 00:36:07 2021
 
 @author: Acer7
-"""
+""" 
+
 from scipy import stats
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -17,6 +18,7 @@ dfgraph = pd.DataFrame(data={
 })
 
 dfgraph.plot.kde()
+plt.show()
 
 d1 = dfgraph['df']
 
